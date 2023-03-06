@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+<h1>Add a CD</h1>
+<p>Add a CD here:</p>
+
+<form action="/cd" method="post">
+  <label for="cdName">CD name</label>
+  <input id="cdName" name="cdName" type="text">
+  <br>
+  <label for="artistName">Artist name</label>
+  <input id="artistName" name="artistName" type="text">
+  <br>
+  <button type="submit">Add</button>
+</form>
+
+<p><a href="/">Back home</a></p>
+<p><a href="/cd">Back to CDs.</a></p>

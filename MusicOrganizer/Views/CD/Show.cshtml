@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@using MusicOrganizer.Models;
+
+<h3>Here are all the tracks in this CD:</h3>
+
+<ol>
+  @foreach (Track track in @Model["tracks"])
+  {
+    <li><a href='/cd/@Model["cd"].Id/tracks/@track.Id'>@track.TrackName</a></li><a href='/cd/@Model["cd"].Id/tracks/@track.Id/delete'><button>Delete This Track</button></a>
+  }
+</ol>
+<p><a href='/cd/@Model["cd"].Id/tracks/new'>Add a new track</a></p>
+<p><a href='/cd'>Return to CD list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

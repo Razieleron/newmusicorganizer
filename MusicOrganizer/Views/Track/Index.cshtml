@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+@using MusicOrganizer.Models;
+<h1>Tracks</h1>
+@if (Model.Count == 0)
+{
+  <p>There are no tracks in the list.</p>
+}
+  <ul>
+  @foreach (Track track in Model)
+  {
+    <li><a href='/tracks/@track.Id'>@track.TrackName</a></li>
+  }
+</ul>
+<a href="/tracks/new">Add a new track</a>
+
+<form action="/tracks/delete" method="post">
+  <button type="submit" name="button">Clear All Tracks</button>
+</form> 

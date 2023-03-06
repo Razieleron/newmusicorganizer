@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+<h1>Add a track to @Model.Name</h1>
+<p>Add a track here:</p>
+
+<form action="/cd/@Model.Id/tracks" method="post">
+  <label for="trackName">Track name</label>
+  <input id="trackName" name="trackName" type="text">
+  <input id="cdId" name="cdId" type="hidden" value="@Model.Id">
+  <br>
+  <button type="submit">Add</button>
+</form>
+
+<p><a href="/">Back home</a></p>
+<p><a href="/tracks">Back to tracks.</a></p>

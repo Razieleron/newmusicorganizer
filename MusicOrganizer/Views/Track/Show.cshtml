@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+<h1>Track Details: </h1>
+
+<h2>@Model["track"].TrackName</h2>
+<h3>CD: @Model["cd"].Name</h3>
+<h3>Artist: @Model["cd"].Artist</h3>
+
+<a href='/cd/@Model["cd"].Id/tracks/new'>Add another track</a>
+<br>
+<a href='/cd'>View all CDs</a>
